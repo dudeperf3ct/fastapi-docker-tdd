@@ -1,3 +1,3 @@
 # Test-Driven Development with FastAPI and Docker
 
-![Continuous Integration](https://github.com/dudeperf3ct7/fastapi-docker-tdd/workflows/Continuous%20Integration%20Workflow/badge.svg?branch=develop)
+[![Continuous Integration Workflow](https://github.com/dudeperf3ct/fastapi-docker-tdd/actions/workflows/ci.yml/badge.svg)](https://github.com/dudeperf3ct/fastapi-docker-tdd/actions/workflows/ci.yml)
