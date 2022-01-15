@@ -3,14 +3,13 @@ name: Continuous Integration Workflow
 on:
   push:
     branches: ["develop"]
-  pull_request: 
+  pull_request:
     branches: ["main"]
 
 env:
   IMAGE: docker.pkg.github.com/$(echo $GITHUB_REPOSITORY | tr '[A-Z]' '[a-z]')/summarizer
 
 jobs:
-
   build:
     name: Build Docker Image
     runs-on: ubuntu-latest
@@ -45,7 +44,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.4.0
         with:
-          ref: main
+          ref: develop
       - name: Log in to GitHub Packages
         run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
         env:
