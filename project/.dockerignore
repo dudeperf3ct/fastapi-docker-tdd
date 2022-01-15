@@ -4,3 +4,4 @@ Dockerfile
 Dockerfile.prod
 htmlcov
 .coverage
+.trunk

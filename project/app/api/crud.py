@@ -1,12 +1,13 @@
-from typing import Union, List
+from typing import List, Union
+
 from app.models.pydantic import SummaryPayloadSchema
 from app.models.tortoise import TextSummary
 
 
 async def post(payload: SummaryPayloadSchema) -> int:
     summary = TextSummary(
-        url = payload.url,
-        summary = "dummy summary",
+        url=payload.url,
+        summary="dummy summary",
     )
     await summary.save()
     return summary.id
